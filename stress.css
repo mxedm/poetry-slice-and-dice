@@ -1,0 +1,182 @@
+@media screen {
+	body {
+		background-color: #EEEEEE;
+		background-image: url("images/ship_bg.jpg");
+		background-attachment: fixed;
+		background-position: bottom;
+		color: rgb(100,100,100);
+		padding: 0.5%;
+		font-family: 'PT Mono', monospace;
+		font-size: 1rem;
+		line-height: 1.1rem;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		font-family: 'Arimo', sans-serif;
+	}
+	h2 {
+		font-size: 1.25rem;
+		line-height: 2.0rem;
+		font-family: 'Arimo', sans-serif;
+	}
+	p {
+		padding: 0.5rem 0 0 0;
+	}
+	pre {
+		font-family: 'PT Mono', monospace;
+	}
+	ul {
+		list-style-position: inside;
+		list-style-type: circle;
+		padding: 1rem;
+	}
+	label, input {
+		display: block;
+	}
+	input, div.result, textarea {
+		font-family: 'PT Mono', monospace;
+	}
+	textarea {
+		width: 100%;
+		opacity: 0.9;
+	}
+	:out-of-range {
+		color: red;
+	}
+	em {
+		font-style: italic;
+	}
+	footer {
+		width: 100%;
+		min-height: 2rem;
+	/* via http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+		background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		clear: both;
+	}
+	footer > p {
+		padding-top: 1rem;
+		font-size: smaller;
+	}
+	.btn {
+		font-size: 1rem;
+		border-radius: 15px;
+		box-shadow: 0px 1px #666666;
+		color: rgb(100,100,100);
+		background-color: rgba(100,100,100,0.3);
+		padding: 10px 20px 10px 20px;
+		text-decoration: none;
+	 	font-family: 'Arimo', sans-serif;
+	}
+	.btn:hover {
+		cursor: pointer;
+		background-color: rgba(100,100,100,1);
+		text-decoration: none;
+		color: black;
+	}
+
+	div#charcountdiv{
+		float: left;
+		clear: both;
+		text-align: right;
+	}
+	input#form_poem_submit {
+		float: right;
+	}
+	.result_table_hor {
+		width: 100%;
+		background-color: rgba(200,200,200,0.7);
+		border-bottom: 1px solid lightgray;
+	}
+	thead {
+		text-align: left;
+		font-weight: bold;
+	}
+	tbody tr:hover {
+		background-color: rgba(100,100,100,0.3)
+	}
+	.hidesmall, {
+		display: none;
+	}
+	#darken, #resultscontroller {
+		display: none;
+	}
+	#darken.large {
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(100,100,100,0.8)
+	}
+	td.counter{
+		text-align: right;
+	}
+	span.stress.highlight::after {
+		content: "|";
+	}
+	#resultscontroller {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	#resizer {
+		visibility: hidden; /*it's already full screen*/
+	}
+	#foothighlighter {
+		float: left;
+	}
+	#foothighlighter input {
+		display: inline-block;
+	}
+	#legendhide {
+		cursor: pointer;
+		text-decoration: underline;
+		color: rgb(0, 0, 238);
+	}
+}
+
+@media only screen and (min-device-width : 480px) {
+	div#entry {
+		clear: both;
+		float: left;
+		width: 45%;
+	}
+	div#result {
+		float: right;
+		width: 45%;
+		overflow: auto;
+	}
+	div#result.large {
+		width: 90%;
+		min-height: 80%;
+		z-index: 105;
+		background-color: rgba(255,255,255,0.8);
+		border-radius: 5px;
+		padding: 2%;
+		left: 3%;
+		position: absolute;
+		top: 5%;
+		z-index: 105;
+	}
+
+	footer {
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+	}
+	.hidebig{
+		display: none;
+	}
+	.result_table_hor {
+		background-color: rgba(200,200,200,0.0);
+		max-width: 100%;
+	}
+	#resizer {
+		visibility: visible; /*full screen*/
+		float: right;
+	}
+}
